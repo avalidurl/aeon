@@ -54,6 +54,7 @@ skills:
   research-brief: { enabled: false, schedule: "0 14 * * *" }
   deep-research: { enabled: false, schedule: "workflow_dispatch", var: "" } # on-demand only — set var to research topic
   last30: { enabled: false, schedule: "workflow_dispatch", var: "" } # on-demand — cross-platform 30-day social research
+  bankr-token-research: { enabled: false, schedule: "workflow_dispatch", model: "claude-sonnet-4-6", var: "" } # on-demand — detailed research on the top 10 Bankr-ecosystem tokens' underlying projects (Sonnet, cost-optimized)
   paper-pick: { enabled: false, schedule: "0 14 * * *" }
   search-skill: { enabled: false, schedule: "0 14 * * *" }
 
