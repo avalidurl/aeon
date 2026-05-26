@@ -1,0 +1,184 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Bankr Top 10 — Project Research"
+      },
+      "children": [
+        "intro",
+        "sep1",
+        "table",
+        "sep2",
+        "interesting",
+        "sep3",
+        "flag",
+        "sep4",
+        "report"
+      ]
+    },
+    "intro": {
+      "type": "Text",
+      "props": {
+        "text": "Two tokens hold 75%+ of ecosystem mcap between them — BNKR and CLANKER are the only real products here; everything else is narrative memes with varying degrees of staying power."
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "#",
+          "Token",
+          "Description",
+          "MCap",
+          "Risk"
+        ],
+        "rows": [
+          [
+            "1",
+            "$BNKR",
+            "AI trading agent on Farcaster/Base",
+            "$53.2M",
+            "M"
+          ],
+          [
+            "2",
+            "$CLANKER",
+            "AI token launchpad; Farcaster-acquired",
+            "$19.1M",
+            "M"
+          ],
+          [
+            "3",
+            "$EAT",
+            "Charity token funding hunger nonprofits",
+            "$5.7M",
+            "H"
+          ],
+          [
+            "4",
+            "$DRB",
+            "First Grok-proposed AI-deployed memecoin",
+            "$4.1M",
+            "H"
+          ],
+          [
+            "5",
+            "$CLAWD",
+            "AI agent deploying open-source contracts",
+            "$1.9M",
+            "M"
+          ],
+          [
+            "6",
+            "$NOICE",
+            "SocialFi tokenizing Farcaster engagement",
+            "$1.5M",
+            "H"
+          ],
+          [
+            "7",
+            "$FAIR",
+            "AI treasury investing on social signals",
+            "$1.3M",
+            "H"
+          ],
+          [
+            "8",
+            "$MOLTEN",
+            "L2 trading platform; anomalous category entry",
+            "$1.2M",
+            "H"
+          ],
+          [
+            "9",
+            "$FARTCOIN",
+            "Pure Base memecoin; 89K holders, $363/day vol",
+            "$627K",
+            "H"
+          ],
+          [
+            "10",
+            "$LUM",
+            "AI co-created meme; down 99%+ from ATH",
+            "$533K",
+            "H"
+          ]
+        ]
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "interesting": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "int-heading",
+        "int-text"
+      ]
+    },
+    "int-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Most interesting: $CLANKER",
+        "level": "h3"
+      }
+    },
+    "int-text": {
+      "type": "Text",
+      "props": {
+        "text": "Farcaster acquisition + $7.16M protocol revenue in 3 weeks of launch; proxystudio co-founder controversy (linked to 2022 $350K theft) is the key risk overhang"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "flag": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "flag-heading",
+        "flag-text"
+      ]
+    },
+    "flag-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Biggest flag: $DRB",
+        "level": "h3"
+      }
+    },
+    "flag-text": {
+      "type": "Text",
+      "props": {
+        "text": "AI-deployed memecoin had $200K stolen via Morse code social engineering of Grok + Bankrbot; exposes systemic risk of autonomous agent wallets"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "report": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full report",
+        "href": "articles/bankr-token-research-2026-05-26.md"
+      }
+    }
+  }
+}
