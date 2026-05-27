@@ -1,9 +1,18 @@
-HEARTBEAT complete. The only flagged condition is the pre-existing **ISS-001** (heartbeat tracking artifact), already filed and notified on 2026-05-26 — deduped, so no new notification was sent. Encouraging recovery signs appeared (latest runs now record `success`, `consecutive_failures=0`), but `last_error` is still garbled, so ISS-001 stays open and I did not reset counters (repair-skill scope).
+Heartbeat complete for the 14:00 UTC run.
 
-`HEARTBEAT_OK (deduped: ISS-001) · STATUS_PAGE=DEGRADED — wrote docs/status.md`
+`HEARTBEAT_OK · STATUS_PAGE=DEGRADED`
 
 ## Summary
-- **Checked**: cron-state.json, ISS-001, last 2 days of logs, aeon.yml, open PRs/urgent issues, token reports.
-- **Findings**: heartbeat chronic-failure flag = known ISS-001 (deduped, no notify). Self-check healthy (~11h). No stalled PRs, no missing scheduled skills, no token report.
-- **Files modified**: `docs/status.md` (🔴 DEGRADED, 1 open issue, next run heartbeat 14:00 UTC), `memory/logs/2026-05-27.md` (new).
-- **Follow-up**: ISS-001 remains open — needs a repair skill to fix the state-update/error-extraction step and reset heartbeat's historical counters. skill-repair is `reactive` but its trigger is commented out in aeon.yml, so nothing will auto-fix it; consider enabling that trigger or running autoresearch on heartbeat.
+
+Ran all priority checks; no new notification needed (the only flag is the known, already-notified ISS-001).
+
+- **P0:** heartbeat `success_rate=0.06` (2/35) still trips the chronic-failure threshold, but this is the documented **ISS-001** run-state tracking artifact — filed/notified 2026-05-26 and deduped at the 08:00 run. Immediate signals are clean: `last_status=success`, `consecutive_failures=0`, fresh `last_success=2026-05-27T08:17:18Z`. Self-check healthy (~6h since last success). ISS-001 left open (root cause unconfirmed; counter reset is repair-skill scope). bankr-token-research is green.
+- **P1:** No open PRs; repo issues are disabled (urgent check N/A).
+- **P2/P3:** Nothing flagged in MEMORY.md; only heartbeat is scheduled and it's running — no missing skills.
+- **Token pulse:** No `articles/token-report-*.md` present → section omitted.
+
+**Files modified:**
+- `docs/status.md` — regenerated, overall 🔴 DEGRADED, updated 14:45 UTC, next run 20:00 UTC.
+- `memory/logs/2026-05-27.md` — appended 14:00 UTC run entry.
+
+**Follow-up:** ISS-001 still needs skill-repair/autoresearch to fix the workflow state-update step and reset heartbeat's historical counters.
