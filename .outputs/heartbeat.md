@@ -2,15 +2,16 @@ HEARTBEAT_OK · STATUS_PAGE=DEGRADED
 
 ## Summary
 
-**Heartbeat (14:00 UTC run on 2026-05-29):**
-- **P0:** No new flags. heartbeat success_rate 0.20 (8/41) still trips chronic-failure threshold, but it's the known **ISS-001** tracking artifact (filed/notified 2026-05-26, deduped continuously since) → no new notification. Latest run: `success`, `consecutive_failures=0`, last_success 2026-05-29T08:03:57Z (~6.5h ago).
-- **P1:** No open PRs; repo issues disabled.
-- **P2/P3:** Nothing flagged in MEMORY.md; only heartbeat on a cron and it's running.
-- **Token pulse:** No `articles/token-report-*.md` → section omitted.
-- **Self-check:** healthy (last_success ~6.5h ago, well within 36h).
+Ran the 20:00 UTC heartbeat for 2026-05-29.
+
+**P0 checks:** No new failures or stuck dispatches. heartbeat `success_rate=0.21 (9/42)` still trips the chronic-failure threshold, but this is the known ISS-001 tracking artifact (filed/notified 2026-05-26, deduped across every subsequent run) — no new notification per the dedup rule. heartbeat self-check healthy (last success ~5.7h ago). bankr-token-research healthy (total_runs=2, below chronic floor).
+
+**P1/P2/P3:** No open PRs, repo issues disabled, nothing flagged in MEMORY.md, only `heartbeat` enabled in aeon.yml and running on schedule.
+
+**Status page:** Regenerated `docs/status.md` — Overall 🔴 DEGRADED, 1 open issue (ISS-001), updated 20:14 UTC, next run heartbeat at 08:00 UTC.
 
 **Files modified:**
-- `docs/status.md` — regenerated (overall 🔴 DEGRADED, 1 open issue, updated 14:30 UTC, next run heartbeat at 20:00 UTC)
-- `memory/logs/2026-05-29.md` — appended 14:00 run log entry
+- `docs/status.md` — refreshed timestamps, heartbeat row (14:31 UTC / 21%), next scheduled run
+- `memory/logs/2026-05-29.md` — appended 20:00 UTC run entry
 
-**Follow-up:** ISS-001 remains open — the run-state counter reset and root-cause fix is out of scope for heartbeat (repair-skill territory). No notification sent (deduped).
+**Follow-up:** ISS-001 remains open; counter reset / root-cause confirmation is repair-skill scope (out of heartbeat's remit).
